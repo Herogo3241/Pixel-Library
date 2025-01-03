@@ -1,6 +1,3 @@
-Here's a sample `README.md` based on your provided details:
-
-```markdown
 # Computer Graphics Algorithms Implementation
 
 This repository contains implementations of various computer graphics algorithms. You can compile and run the code on both Linux and Windows (WSL2) environments. 
