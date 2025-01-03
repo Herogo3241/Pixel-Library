@@ -1,4 +1,4 @@
-#include "../pixel.h"
+#include "../../pixel.h"
 #include "stdio.h"
 
 #define round(a) ((int)(a + 0.5))
@@ -17,13 +17,11 @@ void DDA(struct Vec2 startPos, struct Vec2 endPos){
 
     for (int i = 0; i < steps; i++){
         setPixel((struct Vec2){round(x), round(y)}, (struct Color) {255, 0, 0});
+        display();
         x += xIncrement;
         y += yIncrement;
-        //sleep(100);
+        sleep(100);
     }
-    
-
-
 }
 
 int main() {
@@ -36,3 +34,6 @@ int main() {
     endCanvas();
 
 }
+
+
+

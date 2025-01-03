@@ -23,6 +23,7 @@ extern uint8_t **rChannel, **gChannel, **bChannel;
 void startCanvas(int screenWidth, int screenHeight);
 void setPixel(struct Vec2 pos, struct Color color);
 void display();
+void saveAsImage(const char* filename);
 void endCanvas();
 
 

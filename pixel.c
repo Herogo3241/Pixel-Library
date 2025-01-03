@@ -64,6 +64,12 @@ void display(){
 
 }
 
+void saveAsImage(const char* filename) {
+    char command[256];  // Ensure the command buffer is large enough
+    snprintf(command, sizeof(command), "convert temp.ppm %s", filename);  // Format the command string
+    int conversion_status = system(command);  // Execute the command
+}
+
 
 
 void endCanvas() {
