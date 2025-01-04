@@ -17,10 +17,8 @@ void DDA(struct Vec2 startPos, struct Vec2 endPos){
 
     for (int i = 0; i < steps; i++){
         setPixel((struct Vec2){round(x), round(y)}, (struct Color) {255, 0, 0});
-        display();
         x += xIncrement;
         y += yIncrement;
-        sleep(100);
     }
 }
 
