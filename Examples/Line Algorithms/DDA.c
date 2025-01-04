@@ -23,12 +23,13 @@ void DDA(struct Vec2 startPos, struct Vec2 endPos){
 }
 
 int main() {
-    struct Vec2 startPos = {4, 4};
-    struct Vec2 endPos = {19, 20};
+    struct Vec2 startPos = {5, 10};
+    struct Vec2 endPos = {50, 50};
 
     startCanvas(64, 64);
     DDA(startPos, endPos);
     display();
+    saveAsImage("line.png");
     endCanvas();
 
 }
