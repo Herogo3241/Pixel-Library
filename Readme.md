@@ -25,12 +25,18 @@ This repository contains implementations of various computer graphics algorithms
    sudo apt install imagemagick
    ```
 
+3. **Installing the library**
+   To install pixel library, follow the steps:
+   ```bash
+   sudo make install
+   ```
+
 ## Compilation
 
 Once the repository is cloned and dependencies are installed, you can compile the code using the following command:
 
 ```bash
-gcc main.c <path-to-pixel.c> [-o <executable name>]
+gcc main.c -L. lpixel  [-o <executable name>]
 ```
 
 After compiling the code, you can run the resulting executable to test the implemented algorithms.
