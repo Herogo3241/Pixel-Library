@@ -1,6 +1,6 @@
-# Computer Graphics Algorithms Implementation
+# Computer Graphics Algorithms Implementation Library
 
-This repository contains implementations of various computer graphics algorithms. You can compile and run the code on both Linux and Windows (WSL2) environments. 
+This is the library for implementing computer graphics algorithms and generating output images. You can install the library and compile and run the code on both Linux and Windows (WSL2) environments. 
 
 ## Tools Required
 
@@ -37,7 +37,7 @@ This repository contains implementations of various computer graphics algorithms
 Once the repository is cloned and dependencies are installed, you can compile the code using the following command:
 
 ```bash
-gcc main.c -L.  [-o <executable name>]
+gcc main.c -L. -lpixel [-o <executable name>]
 ```
 
 After compiling the code, you can run the resulting executable to test the implemented algorithms.
