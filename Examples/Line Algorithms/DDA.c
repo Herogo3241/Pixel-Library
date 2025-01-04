@@ -1,4 +1,4 @@
-#include "../../pixel.h"
+#include "../../src/pixel.h"
 #include "stdio.h"
 
 #define round(a) ((int)(a + 0.5))

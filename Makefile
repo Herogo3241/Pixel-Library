@@ -4,8 +4,8 @@ CFLAGS = -Wall -Werror -fPIC
 
 # Define the library name and files
 LIB_NAME = pixel
-SRC_FILES = pixel.c
-HDR_FILES = pixel.h
+SRC_FILES = src/pixel.c
+HDR_FILES = src/pixel.h
 OBJ_FILES = $(SRC_FILES:.c=.o)
 STATIC_LIB = lib$(LIB_NAME).a
 
