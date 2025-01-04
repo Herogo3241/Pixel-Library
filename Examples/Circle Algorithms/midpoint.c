@@ -14,14 +14,14 @@ struct Color color[8] = {
 
 
 void setCirclePoint(int x, int y, struct Vec2 center) {
-    setPixel((struct Vec2){x + center.x, y + center.y}, color[0]);   // First quadrant
-    setPixel((struct Vec2){x + center.x, -y + center.y}, color[1]);  // Fourth quadrant
-    setPixel((struct Vec2){-x + center.x, y + center.y}, color[2]);  // Second quadrant
-    setPixel((struct Vec2){-x + center.x, -y + center.y}, color[3]); // Third quadrant
-    setPixel((struct Vec2){y + center.x, x + center.y}, color[4]);   // Fifth quadrant
-    setPixel((struct Vec2){y + center.x, -x + center.y}, color[5]);  // Sixth quadrant
-    setPixel((struct Vec2){-y + center.x, x + center.y}, color[6]);  // Seventh quadrant
-    setPixel((struct Vec2){-y + center.x, -x + center.y}, color[7]); // Eighth quadrant
+    setPixel((struct Vec2){x + center.x, y + center.y}, color[0]);   // First 
+    setPixel((struct Vec2){x + center.x, -y + center.y}, color[1]);  // Fourth 
+    setPixel((struct Vec2){-x + center.x, y + center.y}, color[2]);  // Second 
+    setPixel((struct Vec2){-x + center.x, -y + center.y}, color[3]); // Third 
+    setPixel((struct Vec2){y + center.x, x + center.y}, color[4]);   // Fifth 
+    setPixel((struct Vec2){y + center.x, -x + center.y}, color[5]);  // Sixth 
+    setPixel((struct Vec2){-y + center.x, x + center.y}, color[6]);  // Seventh 
+    setPixel((struct Vec2){-y + center.x, -x + center.y}, color[7]); // Eighth 
 }
 
 
