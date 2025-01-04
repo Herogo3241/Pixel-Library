@@ -1,4 +1,4 @@
-#include "../../src/pixel.h"
+#include <pixel.h>
 
 
 struct Color color[8] = {
