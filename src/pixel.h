@@ -4,6 +4,7 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <stdint.h> 
+#include <sys/stat.h>
 
 struct Color {
     uint8_t r;
@@ -23,6 +24,8 @@ extern uint8_t **rChannel, **gChannel, **bChannel;
 void startCanvas(int screenWidth, int screenHeight);
 void setPixel(struct Vec2 pos, struct Color color);
 void display();
+void animate(int frameNo);
+void saveVideo(const char* filename, int frameRate);
 void saveAsImage(const char* filename);
 void endCanvas();
 

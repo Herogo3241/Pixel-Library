@@ -71,13 +71,19 @@ int main(void) {
     
     struct Vec2 center = {400, 300};
     int radius = 100;  
-    struct Color green = {255, 255, 255};
-    struct Vec3 lightSrc = {1300, 1200, 3000};  
-    
-    drawSphere(center, radius, green, lightSrc, canvasSize);
+    struct Color color = {0, 255, 0};
+    struct Vec3 lightSrc = {-2000, 700, 1200};  
+    int frame = 0;
+    while(lightSrc.x <= 2000){
+        drawSphere(center, radius, color, lightSrc, canvasSize);
+        lightSrc.x += 10;
+        animate(frame);
+        frame++;
+    }
+    saveVideo("sphere.mp4", 60);
 
     display();
-    saveAsImage("sphere.png");
+    //saveAsImage("sphere.png");
     endCanvas();
     
     return 0; 

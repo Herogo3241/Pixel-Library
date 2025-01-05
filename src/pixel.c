@@ -44,6 +44,7 @@ void setPixel(struct Vec2 pos, struct Color color){
 }
 
 
+
 void display(){
     FILE *out = fopen("temp.ppm", "w");
     fprintf(out, "P6 %d %d %d\n", width, height, maxvalue);
@@ -64,11 +65,51 @@ void display(){
 
 }
 
+void animate(int frameNo){
+    char* folderName = "temp";
+    struct stat st = {0};
+
+    if (stat(folderName, &st)){
+        if(mkdir(folderName, 0777) != 0){
+            perror("Animation Error");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    char tempFile[256];
+    snprintf(tempFile, sizeof(tempFile), "temp/temp%03d.ppm", frameNo);
+    FILE *out = fopen(tempFile, "w");
+    fprintf(out, "P6 %d %d %d\n", width, height, maxvalue);
+
+    for (size_t i = 0; i < height; i++){
+        for(size_t j = 0; j < width; j++){
+            fwrite(&rChannel[i][j], sizeof(uint8_t), 1, out);
+            fwrite(&gChannel[i][j], sizeof(uint8_t), 1, out);
+            fwrite(&bChannel[i][j], sizeof(uint8_t), 1, out);
+        }
+    }
+
+    fclose(out);
+
+}
+
+void saveVideo (const char* fileName, int frameRate){
+    char command[1024];
+    snprintf(command, sizeof(command), "ffmpeg -framerate %d -i temp/temp%%03d.ppm -c:v libx264 -pix_fmt yuv420p %s", frameRate, fileName);
+    int video_status = system(command);
+    system("rm -rf temp");
+    if (video_status == -1){
+        perror("Video Generation Error");
+        exit(EXIT_FAILURE);
+    }
+}
+
 void saveAsImage(const char* filename) {
     char command[256];  // Ensure the command buffer is large enough
     snprintf(command, sizeof(command), "convert temp.ppm %s", filename);  // Format the command string
     int conversion_status = system(command);  // Execute the command
     if (conversion_status == -1){
+        system("rm temp.ppm");
         perror("Conversion Error");
         exit(EXIT_FAILURE);
     }

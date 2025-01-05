@@ -46,7 +46,7 @@ void midpoint(struct Vec2 center, int radius){
 
 
 int main (void){
-    startCanvas (1200, 960);
+    startCanvas(1200, 960);
 
     struct Vec2 center = {600, 480};
     struct Color color = {255, 255, 0};
@@ -54,7 +54,7 @@ int main (void){
     midpoint(center, radius);
 
     display();
-    saveAsImage("midpoint_circle.jpg");
+    saveAsImage("circle/midpoint_circle.jpg");
     endCanvas();
 
 }
