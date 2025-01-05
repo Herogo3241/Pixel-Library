@@ -72,11 +72,11 @@ int main(void) {
     struct Vec2 center = {400, 300};
     int radius = 100;  
     struct Color color = {0, 255, 0};
-    struct Vec3 lightSrc = {-2000, 700, 1200};  
+    struct Vec3 lightSrc = {-2000, 1000, 1200};  
     int frame = 0;
     while(lightSrc.x <= 2000){
         drawSphere(center, radius, color, lightSrc, canvasSize);
-        lightSrc.x += 10;
+        lightSrc.x += 5;
         animate(frame);
         frame++;
     }

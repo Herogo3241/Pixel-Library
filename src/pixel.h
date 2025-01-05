@@ -5,7 +5,7 @@
 #include <stdlib.h> 
 #include <stdint.h> 
 #include <sys/stat.h>
-
+#include <string.h>
 struct Color {
     uint8_t r;
     uint8_t g;

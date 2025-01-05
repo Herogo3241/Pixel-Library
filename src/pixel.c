@@ -77,7 +77,7 @@ void animate(int frameNo){
     }
 
     char tempFile[256];
-    snprintf(tempFile, sizeof(tempFile), "temp/temp%03d.ppm", frameNo);
+    snprintf(tempFile, sizeof(tempFile), "temp/temp%05d.ppm", frameNo);
     FILE *out = fopen(tempFile, "w");
     fprintf(out, "P6 %d %d %d\n", width, height, maxvalue);
 
@@ -95,11 +95,18 @@ void animate(int frameNo){
 
 void saveVideo (const char* fileName, int frameRate){
     char command[1024];
-    snprintf(command, sizeof(command), "ffmpeg -framerate %d -i temp/temp%%03d.ppm -c:v libx264 -pix_fmt yuv420p %s", frameRate, fileName);
+    snprintf(command, sizeof(command), "ffmpeg -framerate %d -i temp/temp%%05d.ppm -c:v libx264 -pix_fmt yuv420p %s", frameRate, fileName);
     int video_status = system(command);
     system("rm -rf temp");
     if (video_status == -1){
         perror("Video Generation Error");
+        exit(EXIT_FAILURE);
+    }
+    memset(command, '\0', 1024);
+    snprintf(command, sizeof(command), "ffplay %s", fileName);
+    int play_status = system(command);
+    if (play_status == -1){
+        perror("Video Play Error");
         exit(EXIT_FAILURE);
     }
 }
