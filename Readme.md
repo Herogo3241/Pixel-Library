@@ -24,8 +24,14 @@ This is the library for implementing computer graphics algorithms and generating
    sudo apt update
    sudo apt install imagemagick
    ```
+3. **Install ffmpeg**  
+   ffmpeg is needed to generate video of the animation, to install:
 
-3. **Installing library**  
+   ```bash
+   sudo apt install ffmpeg
+   ```
+   
+4. **Installing library**
    To install pixel library, follow the steps for your operating system:
 
    ```bash
