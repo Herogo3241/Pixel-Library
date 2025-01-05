@@ -1,6 +1,6 @@
 # Computer Graphics Algorithms Implementation Library
 
-This is the library for implementing computer graphics algorithms and generating output images. You can install the library and compile and run the code on both Linux and Windows (WSL2) environments. 
+This is the library for implementing computer graphics algorithms and generating output images or videos. You can install the library and compile and run the code on both Linux and Windows (WSL2) environments. 
 
 ## Tools Required
 
