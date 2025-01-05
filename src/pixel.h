@@ -6,23 +6,23 @@
 #include <stdint.h> 
 #include <sys/stat.h>
 #include <string.h>
-struct Color {
+typedef struct Color {
     uint8_t r;
     uint8_t g;
     uint8_t b;
-};
+} Color;
 
-struct Vec2{
+typedef struct Vec2{
     int x;
     int y;
-};
+} Vec2;
 
 extern int width, height, maxvalue;
 extern uint8_t **rChannel, **gChannel, **bChannel;
 
 
 void startCanvas(int screenWidth, int screenHeight);
-void setPixel(struct Vec2 pos, struct Color color);
+void setPixel(Vec2 pos, Color color);
 void display();
 void animate(int frameNo);
 void saveVideo(const char* filename, int frameRate);

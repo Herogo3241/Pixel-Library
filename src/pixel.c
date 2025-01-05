@@ -31,7 +31,7 @@ void startCanvas(int canvasWidth, int canvasHeight){
 
 }
 
-void setPixel(struct Vec2 pos, struct Color color){
+void setPixel(Vec2 pos, Color color){
     if (pos.x < 0 || pos.y < 0 || pos.x >= width || pos.y >= height){
         printf("Out of bounds coordinate");
         exit(EXIT_FAILURE);
