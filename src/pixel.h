@@ -23,6 +23,7 @@ extern uint8_t **rChannel, **gChannel, **bChannel;
 
 void startCanvas(int screenWidth, int screenHeight);
 void setPixel(Vec2 pos, Color color);
+Color getPixel(Vec2 pos);
 void display();
 void animate(int frameNo);
 void saveVideo(const char* filename, int frameRate);

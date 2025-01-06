@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/c/KTU/Computer Graphics/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Color	src/pixel.h	/^typedef struct Color {$/;"	s
+Color	src/pixel.h	/^} Color;$/;"	t	typeref:struct:Color
+PIXEL_H	src/pixel.h	/^#define PIXEL_H$/;"	d
+Vec2	src/pixel.h	/^typedef struct Vec2{$/;"	s
+Vec2	src/pixel.h	/^} Vec2;$/;"	t	typeref:struct:Vec2
+b	src/pixel.h	/^    uint8_t b;$/;"	m	struct:Color	typeref:typename:uint8_t
+g	src/pixel.h	/^    uint8_t g;$/;"	m	struct:Color	typeref:typename:uint8_t
+r	src/pixel.h	/^    uint8_t r;$/;"	m	struct:Color	typeref:typename:uint8_t
+x	src/pixel.h	/^    int x;$/;"	m	struct:Vec2	typeref:typename:int
+y	src/pixel.h	/^    int y;$/;"	m	struct:Vec2	typeref:typename:int

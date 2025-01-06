@@ -44,6 +44,13 @@ void setPixel(Vec2 pos, Color color){
 }
 
 
+Color getPixel(Vec2 pos){
+    return (Color){
+        rChannel[height - pos.y - 1][pos.x],
+        gChannel[height - pos.y - 1][pos.x],
+        bChannel[height - pos.y - 1][pos.x]
+    };
+}
 
 void display(){
     FILE *out = fopen("temp.ppm", "w");
