@@ -9,13 +9,78 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	//
+%.o	Makefile	/^%.o: %.c$/;"	t
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Werror -fPIC$/;"	m
 Color	src/pixel.h	/^typedef struct Color {$/;"	s
 Color	src/pixel.h	/^} Color;$/;"	t	typeref:struct:Color
+Compilation	Readme.md	/^## Compilation$/;"	s	chapter:Computer Graphics Algorithms Implementation Library
+Computer Graphics Algorithms Implementation Library	Readme.md	/^# Computer Graphics Algorithms Implementation Library$/;"	c
+DDA	Examples/Line Algorithms/DDA.c	/^void DDA(Vec2 startPos, Vec2 endPos){$/;"	f	typeref:typename:void
+HDR_FILES	Makefile	/^HDR_FILES = src\/pixel.h$/;"	m
+INCLUDE_DIR	Makefile	/^INCLUDE_DIR = $(PREFIX)\/include$/;"	m
+Installation	Readme.md	/^## Installation$/;"	s	chapter:Computer Graphics Algorithms Implementation Library
+LIB_DIR	Makefile	/^LIB_DIR = $(PREFIX)\/lib$/;"	m
+LIB_NAME	Makefile	/^LIB_NAME = pixel$/;"	m
+OBJ_FILES	Makefile	/^OBJ_FILES = $(SRC_FILES:.c=.o)$/;"	m
 PIXEL_H	src/pixel.h	/^#define PIXEL_H$/;"	d
+PREFIX	Makefile	/^PREFIX = \/usr\/local$/;"	m
+SRC_FILES	Makefile	/^SRC_FILES = src\/pixel.c$/;"	m
+STATIC_LIB	Makefile	/^STATIC_LIB = lib$(LIB_NAME).a$/;"	m
+Tools Required	Readme.md	/^## Tools Required$/;"	s	chapter:Computer Graphics Algorithms Implementation Library
 Vec2	src/pixel.h	/^typedef struct Vec2{$/;"	s
 Vec2	src/pixel.h	/^} Vec2;$/;"	t	typeref:struct:Vec2
+Vec3	Examples/3D geometry/sphere.c	/^struct Vec3 {$/;"	s	file:
+all	Makefile	/^all: static$/;"	t
+animate	src/pixel.c	/^void animate(int frameNo){$/;"	f	typeref:typename:void
 b	src/pixel.h	/^    uint8_t b;$/;"	m	struct:Color	typeref:typename:uint8_t
+bChannel	src/pixel.c	/^uint8_t **rChannel, **gChannel, **bChannel;$/;"	v	typeref:typename:uint8_t **
+circleFunction	Examples/3D geometry/sphere.c	/^double circleFunction(int x, int y, int r) { $/;"	f	typeref:typename:double
+clean	Makefile	/^clean:$/;"	t
+color	Examples/Circle Algorithms/midpoint.c	/^struct Color color[8] = {$/;"	v	typeref:struct:Color[8]
+display	src/pixel.c	/^void display(){$/;"	f	typeref:typename:void
+dotProduct	Examples/3D geometry/sphere.c	/^double dotProduct(struct Vec3 v1, struct Vec3 v2) {  $/;"	f	typeref:typename:double
+drawGradientCube	Examples/3D geometry/cube.c	/^void drawGradientCube(struct Vec2 origin, int size) {$/;"	f	typeref:typename:void
+drawLine	Examples/3D geometry/cube.c	/^void drawLine(struct Vec2 start, struct Vec2 end, struct Color color){$/;"	f	typeref:typename:void
+drawLine	Examples/Fill Algorithms/boundaryFill.c	/^void drawLine(Vec2 startPos, Vec2 endPos) {$/;"	f	typeref:typename:void
+drawPolygon	Examples/Fill Algorithms/boundaryFill.c	/^void drawPolygon(Vec2 vertex[], int size){$/;"	f	typeref:typename:void
+drawSphere	Examples/3D geometry/sphere.c	/^void drawSphere(struct Vec2 center, int radius, struct Color color, struct Vec3 lightSrc, struct/;"	f	typeref:typename:void
+endCanvas	src/pixel.c	/^void endCanvas() {$/;"	f	typeref:typename:void
+fillTriangle	Examples/3D geometry/cube.c	/^void fillTriangle(struct Vec2 v1, struct Vec2 v2, struct Vec2 v3,$/;"	f	typeref:typename:void
 g	src/pixel.h	/^    uint8_t g;$/;"	m	struct:Color	typeref:typename:uint8_t
+gChannel	src/pixel.c	/^uint8_t **rChannel, **gChannel, **bChannel;$/;"	v	typeref:typename:uint8_t **
+getPixel	src/pixel.c	/^Color getPixel(Vec2 pos){$/;"	f	typeref:typename:Color
+height	src/pixel.c	/^int width, height, maxvalue = 255;$/;"	v	typeref:typename:int
+install	Makefile	/^install: static$/;"	t
+interpolateColor	Examples/3D geometry/cube.c	/^struct Color interpolateColor(struct Color c1, struct Color c2, float t) {$/;"	f	typeref:struct:Color
+main	Examples/3D geometry/cube.c	/^int main() {$/;"	f	typeref:typename:int
+main	Examples/3D geometry/sphere.c	/^int main(void) {$/;"	f	typeref:typename:int
+main	Examples/Circle Algorithms/midpoint.c	/^int main (void){$/;"	f	typeref:typename:int
+main	Examples/Fill Algorithms/boundaryFill.c	/^int main(void){$/;"	f	typeref:typename:int
+main	Examples/Line Algorithms/DDA.c	/^int main() {$/;"	f	typeref:typename:int
+main	test.c	/^int main(void){$/;"	f	typeref:typename:int
+max	Examples/3D geometry/cube.c	/^#define max(/;"	d	file:
+max	Examples/3D geometry/sphere.c	/^#define max(/;"	d	file:
+maxvalue	src/pixel.c	/^int width, height, maxvalue = 255;$/;"	v	typeref:typename:int
+midpoint	Examples/Circle Algorithms/midpoint.c	/^void midpoint(struct Vec2 center, int radius){$/;"	f	typeref:typename:void
+min	Examples/3D geometry/cube.c	/^#define min(/;"	d	file:
+normalize	Examples/3D geometry/sphere.c	/^struct Vec3 normalize(struct Vec3 v) {$/;"	f	typeref:struct:Vec3
+normalizeColor	Examples/3D geometry/cube.c	/^#define normalizeColor(/;"	d	file:
 r	src/pixel.h	/^    uint8_t r;$/;"	m	struct:Color	typeref:typename:uint8_t
+rChannel	src/pixel.c	/^uint8_t **rChannel, **gChannel, **bChannel;$/;"	v	typeref:typename:uint8_t **
+red	Examples/Fill Algorithms/boundaryFill.c	/^Color red = {255, 0, 0};$/;"	v	typeref:typename:Color
+round	Examples/3D geometry/cube.c	/^#define round(/;"	d	file:
+round	Examples/Line Algorithms/DDA.c	/^#define round(/;"	d	file:
+saveAsImage	src/pixel.c	/^void saveAsImage(const char* filename) {$/;"	f	typeref:typename:void
+saveVideo	src/pixel.c	/^void saveVideo (const char* fileName, int frameRate){$/;"	f	typeref:typename:void
+setCirclePoint	Examples/Circle Algorithms/midpoint.c	/^void setCirclePoint(int x, int y, struct Vec2 center) {$/;"	f	typeref:typename:void
+setPixel	src/pixel.c	/^void setPixel(Vec2 pos, Color color){$/;"	f	typeref:typename:void
+startCanvas	src/pixel.c	/^void startCanvas(int canvasWidth, int canvasHeight){$/;"	f	typeref:typename:void
+static	Makefile	/^static: $(OBJ_FILES)$/;"	t
+uninstall	Makefile	/^uninstall:$/;"	t
+width	src/pixel.c	/^int width, height, maxvalue = 255;$/;"	v	typeref:typename:int
+x	Examples/3D geometry/sphere.c	/^    double x, y, z;  $/;"	m	struct:Vec3	typeref:typename:double	file:
 x	src/pixel.h	/^    int x;$/;"	m	struct:Vec2	typeref:typename:int
+y	Examples/3D geometry/sphere.c	/^    double x, y, z;  $/;"	m	struct:Vec3	typeref:typename:double	file:
 y	src/pixel.h	/^    int y;$/;"	m	struct:Vec2	typeref:typename:int
+z	Examples/3D geometry/sphere.c	/^    double x, y, z;  $/;"	m	struct:Vec3	typeref:typename:double	file:

@@ -71,7 +71,7 @@ int main(void) {
     
     struct Vec2 center = {400, 300};
     int radius = 100;  
-    struct Color color = {0, 255, 0};
+    struct Color color = {255, 253, 241};
     struct Vec3 lightSrc = {-2000, 1000, 1200};  
     int frame = 0;
     while(lightSrc.x <= 2000){

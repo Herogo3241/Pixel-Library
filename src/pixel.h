@@ -6,6 +6,7 @@
 #include <stdint.h> 
 #include <sys/stat.h>
 #include <string.h>
+
 typedef struct Color {
     uint8_t r;
     uint8_t g;
