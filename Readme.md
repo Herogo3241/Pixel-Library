@@ -13,8 +13,8 @@ This is the library for implementing computer graphics algorithms and generating
    First, clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/Herogo3241/computer-graphics.git
-   cd computer-graphics
+   git clone https://github.com/Herogo3241/Pixel-Library.git
+   cd Pixel-Library
    ```
 
 2. **Install ImageMagick**  
