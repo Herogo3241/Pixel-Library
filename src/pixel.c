@@ -33,14 +33,15 @@ void startCanvas(int canvasWidth, int canvasHeight){
 
 void setPixel(Vec2 pos, Color color){
     if (pos.x < 0 || pos.y < 0 || pos.x >= width || pos.y >= height){
-        printf("Out of bounds coordinate");
-        exit(EXIT_FAILURE);
+      //  printf("Out of bounds coordinate");
+      //  exit(EXIT_FAILURE);
+    }else {
+        rChannel[height - pos.y - 1][pos.x] = color.r; 
+        gChannel[height - pos.y - 1][pos.x] = color.g;
+        bChannel[height - pos.y - 1][pos.x] = color.b;   
     }
 
     //setting the  pixel
-    rChannel[height - pos.y - 1][pos.x] = color.r; 
-    gChannel[height - pos.y - 1][pos.x] = color.g;
-    bChannel[height - pos.y - 1][pos.x] = color.b;   
 }
 
 
