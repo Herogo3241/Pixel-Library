@@ -14,24 +14,25 @@ void DDA(Vec2 startPos, Vec2 endPos){
     
     float x = startPos.x;
     float y = startPos.y;
-
+    int frame = 0;
     for (int i = 0; i < steps; i++){
         setPixel((Vec2){round(x), round(y)}, (Color) {255, 0, 0});
         x += xIncrement;
         y += yIncrement;
-        animate(i);
+        if(frame % 10 == 0)
+            animate(frame);
     }
 }
 
 int main() {
-    Vec2 startPos = {5, 10};
-    Vec2 endPos = {50, 50};
+    Vec2 startPos = {100, 150};
+    Vec2 endPos = {500, 550};
 
-    startCanvas(64, 64);
+    startCanvas(800, 600);
     DDA(startPos, endPos);
     display();
-    saveAsImage("line.png");
-    saveVideo("line.mp4", 1);
+    saveAsImage("DDA.png");
+    saveVideo("DDA.mp4", 30);
     endCanvas();
 
 }
