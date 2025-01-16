@@ -35,6 +35,7 @@ This is the library for implementing computer graphics algorithms and generating
    To install pixel library, follow the steps for your operating system:
 
    ```bash
+   sudo apt install make
    sudo make install
    ``` 
 
@@ -53,4 +54,37 @@ The program will run and execute the computer graphics algorithms.
 
 
 
+
+## Set Up for Windows
+
+Once the repository is cloned, follow these steps:
+   - Open WSL terminal in the Pixel-Library folder
+
+   1) Run the following commands in WSL
+      ```bash
+         sudo apt update
+         
+         sudo apt install imagemagick
+
+         sudo apt install ffmpeg
+
+         sudo apt install make
+
+         sudo make install
+      ```
+   2) Install the latest version of Xming X server. This is required for viewing the result in windows.
+      [link](https://sourceforge.net/projects/xming/)
+
+      Once installed, run the app from the start menu. The app icon will be displayed in your appbar.
+
+   3) Restart the WSL terminal.
+   4) Run the program using the following commands:
+      ```bash
+         gcc <ProgramName>.c -L. -lpixel [-o <executable name>]
+      ```
+
+After compiling the code, you can run the resulting executable to test the implemented algorithms.
+
+
+The program will run and execute the computer graphics algorithms.
 
