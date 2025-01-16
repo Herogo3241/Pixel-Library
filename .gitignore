@@ -5,3 +5,6 @@ test.c
 *.a
 *.mp4
 tags
+*.out
+
+*.png
