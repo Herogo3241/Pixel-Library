@@ -55,7 +55,7 @@ The program will run and execute the computer graphics algorithms.
 
 
 
-## Set Up for Windows
+## Set Up for Windows 10
 
 Once the repository is cloned, follow these steps:
    - Open WSL terminal in the Pixel-Library folder
@@ -78,10 +78,13 @@ Once the repository is cloned, follow these steps:
       Once installed, run the app from the start menu. The app icon will be displayed in your appbar.
 
    3) Restart the WSL terminal.
+   
    4) Run the program using the following commands:
       ```bash
+         export DISPLAY=:0
          gcc <ProgramName>.c -L. -lpixel [-o <executable name>]
       ```
+      > XMing Server needs to be started before running step 4.
 
 After compiling the code, you can run the resulting executable to test the implemented algorithms.
 
